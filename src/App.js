@@ -1,5 +1,6 @@
-import {Users} from "./components";
 import {useState} from "react";
+
+import {Users} from "./components";
 
 const App = () => {
     const [user, setUser] = useState(null);
