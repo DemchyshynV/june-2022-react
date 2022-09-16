@@ -5,9 +5,11 @@ import {User} from "../User/User";
 
 const Users = ({getUser}) => {
     const [users, setUser] = useState([]);
+
     const addUser = (item) => {
         setUser([...users, item])
     }
+
     useEffect(() => {
         userService.getAll().then(({data}) => data.filter(user => user.id < 5)).then(users => setUser(users))
     }, [])

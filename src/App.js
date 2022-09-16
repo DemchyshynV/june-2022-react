@@ -4,6 +4,7 @@ import {Users} from "./components";
 
 const App = () => {
     const [user, setUser] = useState(null);
+
     const getUser = (u) => {
         if (u === user) {
             setUser(null)
