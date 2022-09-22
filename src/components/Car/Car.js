@@ -1,7 +1,7 @@
 import css from './Car.module.css';
 import {carService} from "../../services";
 
-const Car = ({car, setCars}) => {
+const Car = ({car, setCars,setCarForUpdate}) => {
     const {id, model, price, year} = car;
     const deleteCar = async () => {
         await carService.deleteById(id);
@@ -12,15 +12,6 @@ const Car = ({car, setCars}) => {
         })
 
     }
-    // const deleteCar = () => {
-    //     carService.deleteById(id).then(() => {
-    //         setCars(cars => {
-    //             const index = cars.findIndex(value => value.id === id);
-    //             cars.splice(index, 1)
-    //             return [...cars]
-    //         })
-    //     })
-    // }
     return (
         <div className={css.Car}>
             <div>
@@ -30,7 +21,7 @@ const Car = ({car, setCars}) => {
                 <div>year: {year}</div>
             </div>
             <div className={css.tools}>
-                <button>Update</button>
+                <button onClick={()=>setCarForUpdate(car)}>Update</button>
                 <button onClick={() => deleteCar()}>Delete</button>
             </div>
         </div>
