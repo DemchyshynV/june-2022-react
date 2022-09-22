@@ -33,6 +33,7 @@ const CarForm = ({setCars, carForUpdate, setCarForUpdate}) => {
             const {data} = await carService.create(car);
             setCars(cars => [...cars, data])
         }
+
         reset()
     };
 

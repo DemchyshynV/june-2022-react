@@ -1,4 +1,4 @@
-const baseURL = 'http://owu.linkpc.net/api/v2'
+const baseURL = process.env.REACT_APP_API
 
 const urls = {
     cars: '/cars'
