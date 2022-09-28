@@ -15,8 +15,8 @@ const App = () => {
                     <Route path={':id'} element={<PostDetailPage/>}/>
                 </Route>
                 <Route path={'about'} element={<AboutPage/>}/>
-            </Route>
                 <Route path={'*'} element={<NotFoundPage/>}/>
+            </Route>
         </Routes>
     );
 };
