@@ -2,8 +2,8 @@ import {useReducer} from "react";
 
 import {DEC, INC, RESET, SET} from "./count.actions";
 
-const reducer = (state, action) => {
-    switch (action.type) {
+const reducer = (state, {type, payload}) => {
+    switch (type) {
         case INC:
             return {count1: state.count1 + 1}
         case DEC:
@@ -11,7 +11,7 @@ const reducer = (state, action) => {
         case RESET:
             return {count1: 0}
         case SET:
-            return {count1: action.payload}
+            return {count1: payload}
     }
 }
 
