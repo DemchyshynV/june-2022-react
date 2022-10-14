@@ -1,0 +1,95 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MovieDB",
+		"_postman_id": "e06b1837-8392-232a-06c5-82016b4de8fd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get movies",
+			"request": {
+				"url": {
+					"raw": "https://api.themoviedb.org/3/discover/movie?page=2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"discover",
+						"movie"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get genres",
+			"request": {
+				"url": "https://api.themoviedb.org/3/genre/movie/list",
+				"method": "GET",
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "search movie",
+			"request": {
+				"url": {
+					"raw": "https://api.themoviedb.org/3/search/keyword?query=super",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"search",
+						"keyword"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "super",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get poster",
+			"request": {
+				"url": "https://image.tmdb.org/t/p/w500/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg",
+				"method": "GET",
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
