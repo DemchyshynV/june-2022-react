@@ -1,4 +1,4 @@
-import {useLocation} from 'react-router-dom';
+import {useLocation, Location} from 'react-router-dom';
 
 // type useLocationType = ReturnType<typeof useLocation>
 //
@@ -6,13 +6,12 @@ import {useLocation} from 'react-router-dom';
 //     state: T
 // }
 
-interface IState<T> {
+interface IState<T> extends Location {
     state: T
 }
 
-type LocationType<S> = ReturnType<typeof useLocation> & IState<S>
 
-const useAppLocations = <State>():LocationType<State> => useLocation() as LocationType<State>;
+const useAppLocations = <State>(): IState<State> => useLocation();
 
 export {
     useAppLocations
