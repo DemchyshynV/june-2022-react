@@ -1,7 +1,11 @@
+import {UseMemo} from "./components/UseMemo/UseMemo";
+import {Main} from "./components/UseCallBack/Main";
+
 const App = () => {
     return (
         <div>
-            App
+            {/*<UseMemo/>*/}
+            <Main/>
         </div>
     );
 };
